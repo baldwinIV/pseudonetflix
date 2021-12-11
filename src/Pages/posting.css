@@ -1,0 +1,78 @@
+.loginLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal {
+  flex-direction: column;
+  width: 500px;
+  height: 700px;
+  border: solid 1px black;
+  border-radius: 20px;
+  background-color: #666370;
+  position: absolute;
+  z-index: 2;
+  left: 50vw - 250px;
+  margin-top: 150px;
+  overflow: auto;
+}
+
+.modal_head {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 2px gray;
+}
+
+.modal_body {
+  flex: 8;
+  width: 95%;
+  background-size: cover;
+  overflow: hidden;
+  object-fit: fill;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal_bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: solid 2px gray;
+  justify-content: flex-end;
+  flex: 1;
+  width: 100%;
+}
+
+.modalinput {
+  width: 98%;
+  height: 2rem;
+}
+
+#taskdescription {
+  width: 98%;
+}
+
+.modaltext {
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.modal_title {
+  padding-left: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}

@@ -1,0 +1,51 @@
+.nodrag {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    border: solid gray 1px;
+    border-radius: 15px;
+    background-color: white;
+    margin: 0 auto;
+    width: 300px;
+    height: 400px;
+}
+
+.post_head {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.post_title {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+
+.post_img {
+    flex: 6;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+    object-fit: fill;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.post_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 3;
+    width: 100%;
+}

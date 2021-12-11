@@ -1,0 +1,13 @@
+.layout {
+    background-color: #666370;
+    border: solid 1px red;
+    border-radius: 5px;
+    color: black;
+}
+
+.nodrag {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

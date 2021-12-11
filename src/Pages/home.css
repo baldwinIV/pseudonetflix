@@ -1,0 +1,45 @@
+.html {
+  background: #DBF0EB;
+  color: black;
+  font-size: 1rem;
+  margin: 0px;
+
+}
+
+.Titlefont {
+  color: #ff220c;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.nodrag {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.Menubar {
+  width: 100%;
+  height: 1.5rem;
+  padding: 0.5rem;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ColContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.RowContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

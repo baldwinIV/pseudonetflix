@@ -1,33 +1,27 @@
-import { createContext, useReducer } from "react";
-import { LOG_OUT, LOG_IN, QUERYINFO } from "./actionType";
+// import { createContext, useReducer, useState } from "react";
+// import { SETEMAIL, SETLOGIN, SETBIRTH } from "./actiontype";
 
-//initial state
-//context info what i want to manage.. in this case.. login info and loggined man's default infomation
-const initialState = {
-    isLogin: false,
-    userid: "nonestate",
-};
+// //initial state
+// //context info what i want to manage.. in this case.. login info and loggined man's default infomation
+// const initialState = {
+//     user_email: 'default',
+//     isLogin: false,
+//     user_birthyear: "0000",
+//     // setEmail: () => { },
+//     // setLogin: () => { },
+//     // setBirth: () => { },
+// };
 
-// create context
-const LoginContext = createContext({});
+// // create context
+// const LoginContext = createContext(initialState);
 
-// create reducer
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case LOG_IN:
-            return {
-                ...state
-            };
-        default:
-            return state;
-    }
-};
+// // create Provider component (High order component)
+// const Provider = ({ children }) => {
+    
+//     const [user_email, setmail ] = useState("default");
+//     const [isLogin, setlogin ] = useState(false);
+//     const [user_birthyear, setbirth ] = useState("0000");
+//     return <LoginContext.Provider value={value}>{children}</LoginContext.Provider>;
+// };
 
-// create Provider component (High order component)
-const Provider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
-    const value = { state, dispatch };
-    return <LoginContext.Provider value={value}>{children}</LoginContext.Provider>;
-};
-
-export { LoginContext, Provider };
+// export { LoginContext, Provider };

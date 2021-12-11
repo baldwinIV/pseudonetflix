@@ -1,0 +1,16 @@
+.Titlefont {
+    color: #ff1199;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+
+.headerbar {
+    width: 1400px;
+    height: 2.0rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    display: flex;
+}

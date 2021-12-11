@@ -1,3 +1,3 @@
-export const LOG_IN = "LOG_IN";
-export const LOG_OUT = "LOG_OUT";
-export const QUERYINFO = "QUERYINFO";
+export const SETEMAIL = "SETEMAIL";
+export const SETLOGIN = "SETLOGIN";
+export const SETBIRTH = "SETBIRTH";

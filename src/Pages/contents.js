@@ -1,26 +1,20 @@
-import logo from '../logo.svg';
 import React from 'react';
+import Header from '../components/header';
+import HomeComponent from '../components/home/HomeComponent';
 import '../App.css';
 
-function Curation() {
+function Contents() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+
+      <Header></Header>
+      <p>
         You are in Contents
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </p>
+
+
+    </div >
   );
 }
 
-export default Curation;
+export default Contents;

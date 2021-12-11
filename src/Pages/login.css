@@ -1,0 +1,11 @@
+.loginLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginform {
+  width: fit-content;
+  background-color: gray;
+  margin-top: 200px;
+}
