@@ -6,12 +6,9 @@ import Header from '../components/header';
 import { useNavigate } from "react-router-dom";
 import HomeComponent from '../components/home/HomeComponent';
 
-
-
 function Home() {
 
   const navigate = useNavigate();
-
 
   const onClickDelete = async () => {
     console.log('delete seccsion')
@@ -31,14 +28,12 @@ function Home() {
     console.log("asdasdasd", sessionStorage.getItem("Login"))
     if (sessionStorage.getItem("Login") === 'false') {
       console.log("로그인으로 돌아감", sessionStorage.getItem("Login"))
+      navigate('/')
     }
   }, [navigate])
 
-
-
   return (
     <div className="App">
-
       <Header></Header>
 
       <div className="ColContainer">

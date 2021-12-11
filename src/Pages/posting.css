@@ -17,10 +17,7 @@
   border: solid 1px black;
   border-radius: 20px;
   background-color: #666370;
-  position: absolute;
-  z-index: 2;
-  left: 50vw - 250px;
-  margin-top: 150px;
+ 
   overflow: auto;
 }
 

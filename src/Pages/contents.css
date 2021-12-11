@@ -1,0 +1,32 @@
+.nodrag {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.postboard {
+  /* here we Use Display grid */
+  display: flex;
+  width: fit-content;
+  min-width: 300px;
+  height: 750px;
+  min-height: 750px;
+  margin-left: 10px;
+  border-radius: 20px;
+  overflow: auto;
+  flex-direction: column;
+  border: solid 2px red;
+  background-color: #dddddd;
+}
+.postboard::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+.contentsContainer{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+} 

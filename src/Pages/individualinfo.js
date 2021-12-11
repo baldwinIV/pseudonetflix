@@ -18,6 +18,10 @@ function Individualinfo() {
     setPosts(res.data);
   }
   useEffect(() => {
+    if (sessionStorage.getItem("Login") === 'false') {
+      console.log("로그인으로 돌아감", sessionStorage.getItem("Login"))
+      navigate('/')
+    }
     initMovie();
   }, [navigate])
   return (
@@ -31,7 +35,7 @@ function Individualinfo() {
         {posts
           .map((value, index, array) => { //value array[index] index index array movies movies.filter.map // sorting
             return (
-              <Post key = {value.post_id}value={value} _index={index + 1}></Post>
+              <Post key={value.post_id} value={value} _index={index + 1}></Post>
             )
           })}
       </div>

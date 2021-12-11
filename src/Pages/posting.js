@@ -33,8 +33,11 @@ function Posting() {
     setdescription(e.target.value)
   }
   useEffect(() => {
+    if (sessionStorage.getItem("Login") === 'false') {
+      console.log("로그인으로 돌아감", sessionStorage.getItem("Login"))
+      navigate('/')
+    }
     init_movie();
-
   }, [navigate])
 
   const onSubmit = async () => {

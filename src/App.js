@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div style = {{display: "flex", flexDirection: "column", alignItems : "center"}}>
-      <div style={{ backgroundColor: "#1c1f33", width: "1400px", height: "auto", paddingBottom: "1500px", color: "#ff220c" }}>
+      <div style={{ backgroundColor: "#1c1f33", width: "1400px", height: "auto", paddingTop : "50px", paddingBottom: "100px", color: "#ff220c" }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Login />} />

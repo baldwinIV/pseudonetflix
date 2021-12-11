@@ -73,6 +73,7 @@ function Login() {
   const onClickDelete = async () => {
     console.log('delete seccsion')
     const res = await axios.get('/api/deleteSession', { withCredentials: true })
+    sessionStorage.clear()
     console.log(res);
   }
   const onClickSubmit = async () => {
