@@ -6,6 +6,7 @@
 }
 
 .review {
+    position: relative;
     display: flex;
     flex-direction: column;
     border: solid gray 1px;
@@ -50,3 +51,4 @@
     flex: 3;
     width: 100%;
 }
+

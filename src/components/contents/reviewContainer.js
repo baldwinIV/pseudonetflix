@@ -4,16 +4,12 @@ import { useNavigate } from "react-router-dom";
 import './reviewContainer.css';
 
 
-function ReviewContainer({ value,movie }) {
-    // console.log("value", value.post_movie_id);
-    
-    // console.log("value", movieinfo);
-    
+function ReviewContainer({ value, movie }) {
+
+
     if (movie !== 'default!@#' || value.post_title !== undefined) {
-        const movieinfo = JSON.parse(movie)
         return (
             <div className='review' style={{}}>
-
                 <div className="review_head">
                 </div>
                 <div className="review_img"
@@ -22,12 +18,12 @@ function ReviewContainer({ value,movie }) {
                 <div className="review_bottom">
                     <div className="review_title">{value.post_title}</div>
                     <div>{value.post_description}</div>
-                    <div>{movieinfo.movie_title}</div>
+                    <div>{movie}</div>
                 </div>
             </div >
         );
     } else {
-        console.log("else");
+        console.log("it means that movieInfo is default!@#");
         return (
             <div className='review' style={{}}>
 

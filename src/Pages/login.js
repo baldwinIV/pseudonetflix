@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './login.css';
+import '../App.css';
 import { useNavigate } from "react-router-dom";
 import { Header } from '../components'
 import HomeComponent from '../components/home/HomeComponent';
@@ -13,7 +14,6 @@ function Login() {
   const [registerPW, setRegisterPW] = useState('')
   const [inputId, setInputId] = useState('')
   const [inputPw, setInputPw] = useState('')
-  const [movies, setMovies] = useState([]);
 
   const [isloggined, setloggined] = useState('false')
   const [isregister, setregister] = useState('false')
@@ -81,11 +81,6 @@ function Login() {
     const res = await axios.post('/api/register', { withCredentials: true })
     console.log(res);
   }
-  const onClickMovie = async () => {
-    const res = await axios.get('/api/movie', { withCredentials: true })
-    console.log(res);
-    setMovies(res.data);
-  }
   const onClickRegister = () => {
     if (isregister === 'true') {
       setregister('false');
@@ -108,33 +103,25 @@ function Login() {
     return (
       <div className='loginLayout'>
         <Header></Header>
+        <div className='slogentext1'>PseudoNetflix - want to be real netflix</div>
+        <div className='slogentext2'>Post your Review! Searching For Fantastic Movies!</div>
         <div className='loginform'>
           <h2>Login</h2>
-          <div>
-            <label htmlFor='input_Email'>Email : </label>
+          <div className = 'loginRow'>
+            <label htmlFor='input_Email'>Email</label>
             <input type='text' name='input_Email' value={inputId} onChange={handleInputId} />
           </div>
-          <div>
-            <label htmlFor='input_pw'>PW : </label>
+          <div className = 'loginRow'>
+            <label htmlFor='input_pw'>PW</label>
             <input type='password' name='input_pw' value={inputPw} onChange={handleInputPw} />
           </div>
+          <div style={{marginBottom : "10px"}}></div>
           <div>
-            <button type='button' onClick={onClickLogin}>Login</button>
-            <button type='button' onClick={onClickMovie}>Movie</button>
-            <button type='button' onClick={onClickTest}>TestSesscion</button>
-            <button type='button' onClick={onClickDelete}>delete</button>
-            <button type='button' onClick={onClickRegister}>Register</button>
+            <button className = "defaultButton" type='button' onClick={onClickLogin}>Login</button>
+            <button className = "defaultButton" type='button' onClick={onClickTest}>TestSesscion</button>
+            <button className = "defaultButton" type='button' onClick={onClickDelete}>Sessiondelete</button>
+            <button className = "defaultButton" type='button' onClick={onClickRegister}>Register</button>
           </div>
-        </div>
-        <div>
-          {movies.filter((value, index, array) => {
-            return (value.movie_year === 2013 ? true : false)
-          })
-            .map((value, index, array) => { //value array[index] index index array movies movies.filter.map // sorting
-              return (
-                <div>{value.movie_id}asd</div>
-              )
-            })}
         </div>
       </div>
     )
@@ -143,6 +130,8 @@ function Login() {
     return (
       <div className='loginLayout'>
         <Header></Header>
+        <div className='slogentext1'>PseudoNetflix - want to be real netflix</div>
+        <div className='slogentext2'>Post your Review! Searching For Fantastic Movies!</div>
         <div className='loginform'>
           <h2>Register</h2>
           <div>please input your information </div>
@@ -163,8 +152,8 @@ function Login() {
             <input type='text' name='register_birthyear' value={registerBY} onChange={handleRegisterBY} />
           </div>
           <div>
-            <button type='button' onClick={onClickSubmit}>Submit Register</button>
-            <button type='button' onClick={onClickRegister}>Login</button>
+            <button className = "defaultButton" type='button' onClick={onClickSubmit}>Submit Register</button>
+            <button className = "defaultButton" type='button' onClick={onClickRegister}>Login</button>
           </div>
         </div>
 

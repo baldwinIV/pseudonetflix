@@ -30,3 +30,27 @@
   justify-content: space-between;
   align-items: flex-start;
 } 
+.MovieTextContainer {
+  /* width: 1000px;
+  height: 750px; */
+  position: absolute;
+  Top: 210px;
+  left: 470px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  border: solid gray 1px;
+  border-radius: 15px;
+  background-color: yellow;
+}
+.MTcomponent {
+  text-align: start;
+  font-size: 1.5rem;
+  color: red;
+}
+.MTtitle {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 3rem;
+  font-weight: 1000;
+  
+}
