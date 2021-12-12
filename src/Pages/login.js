@@ -38,29 +38,34 @@ function Login() {
     setRegisterBY(e.target.value)
   }
   const onClickLogin = () => {
-    console.log('click login')
-    const params = {
-      "email": inputId,
-      "password": inputPw,
-    }
-    console.log(params)
-    axios.get('/api/addSession', { params })
-      .then(
-        res => {
-          if (res.data !== "fail") { //it means that you are success
-            console.log("request:", res.data);
-            sessionStorage.setItem("Email", res.data.user_email)
-            sessionStorage.setItem("Login", true)
-            sessionStorage.setItem("ID", res.data.user_id)
-            setloggined('true');
-            sessionStorage.setItem("Birth", res.data.user_birthyear)
-            sessionStorage.setItem("Name", res.data.user_name)
-          } else {
-            alert("incorrect Email or Password!")
+    if (inputId.length === 0 || inputPw.length === 0) {
+      alert("plz insert all information")
+    } else {
+      console.log('click login')
+      const params = {
+        "email": inputId,
+        "password": inputPw,
+      }
+      console.log(params)
+      axios.get('/api/addSession', { params })
+        .then(
+          res => {
+            if (res.data !== "fail") { //it means that you are success
+              console.log("request:", res.data);
+              sessionStorage.setItem("Email", res.data.user_email)
+              sessionStorage.setItem("Login", true)
+              sessionStorage.setItem("ID", res.data.user_id)
+              setloggined('true');
+              sessionStorage.setItem("Birth", res.data.user_birthyear)
+              sessionStorage.setItem("Name", res.data.user_name)
+            } else {
+              alert("incorrect Email or Password!")
+            }
           }
-        }
-      )
-      .catch()
+        )
+        .catch()
+    }
+
 
   }
   const onClickTest = async () => {

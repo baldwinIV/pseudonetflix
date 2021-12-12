@@ -84,7 +84,7 @@ function Posting() {
               <option value="none">=== Movie Selection ===</option>
               {movies.map((value, index, array) => { //value array[index] index index array movies movies.filter.map // sorting
                 return (
-                  <option key={value.movie_id} value={value.movie_id}>{value.movie_title}{value.movie_id}</option>
+                  <option key={value.movie_id} value={value.movie_id}>{value.movie_title}</option>
                 )
               })}
             </select>
