@@ -77,9 +77,27 @@ function Login() {
     console.log(res);
   }
   const onClickSubmit = async () => {
-    console.log('submit session')
-    const res = await axios.post('/api/register', { withCredentials: true })
-    console.log(res);
+    if (registerEmail.length === 0 || registerName.length === 0 || registerBY.length === 0 || registerPW.length === 0) {
+      alert("plz insert all information")
+    } else {
+      console.log('submit session')
+      const tosend = {
+        UserEmail: registerEmail,
+        UserName: registerName,
+        UserBirthyear: registerBY,
+        UserPassword: registerPW,
+      }
+      const res = await axios.post('/api/register', tosend, { withCredentials: true })
+      alert("complete!")
+      if (isregister === 'true') {
+        setregister('false');
+      } else {
+        setregister('true');
+      }
+
+      console.log(res);
+    }
+
   }
   const onClickRegister = () => {
     if (isregister === 'true') {
@@ -107,20 +125,20 @@ function Login() {
         <div className='slogentext2'>Post your Review! Searching For Fantastic Movies!</div>
         <div className='loginform'>
           <h2>Login</h2>
-          <div className = 'loginRow'>
+          <div className='loginRow'>
             <label htmlFor='input_Email'>Email</label>
             <input type='text' name='input_Email' value={inputId} onChange={handleInputId} />
           </div>
-          <div className = 'loginRow'>
+          <div className='loginRow'>
             <label htmlFor='input_pw'>PW</label>
             <input type='password' name='input_pw' value={inputPw} onChange={handleInputPw} />
           </div>
-          <div style={{marginBottom : "10px"}}></div>
+          <div style={{ marginBottom: "10px" }}></div>
           <div>
-            <button className = "defaultButton" type='button' onClick={onClickLogin}>Login</button>
-            <button className = "defaultButton" type='button' onClick={onClickTest}>TestSesscion</button>
-            <button className = "defaultButton" type='button' onClick={onClickDelete}>Sessiondelete</button>
-            <button className = "defaultButton" type='button' onClick={onClickRegister}>Register</button>
+            <button className="defaultButton" type='button' onClick={onClickLogin}>Login</button>
+            <button className="defaultButton" type='button' onClick={onClickTest}>TestSesscion</button>
+            <button className="defaultButton" type='button' onClick={onClickDelete}>Sessiondelete</button>
+            <button className="defaultButton" type='button' onClick={onClickRegister}>to Register</button>
           </div>
         </div>
       </div>
@@ -134,26 +152,26 @@ function Login() {
         <div className='slogentext2'>Post your Review! Searching For Fantastic Movies!</div>
         <div className='loginform'>
           <h2>Register</h2>
-          <div>please input your information </div>
-          <div>
+          <div className='registerRow'>
             <label htmlFor='input_name'>Name : </label>
             <input type='text' name='register_name' value={registerName} onChange={handleRegisterName} />
           </div>
-          <div>
+          <div className='registerRow'>
             <label htmlFor='input_email'>Email : </label>
             <input type='text' name='register_email' value={registerEmail} onChange={handleRegisterEmail} />
           </div>
-          <div>
+          <div className='registerRow'>
             <label htmlFor='input_pw'>PW : </label>
             <input type='password' name='register_pw' value={registerPW} onChange={handleRegisterPW} />
           </div>
-          <div>
+          <div className='registerRow'>
             <label htmlFor='input_birthyear'>birthyear : </label>
             <input type='text' name='register_birthyear' value={registerBY} onChange={handleRegisterBY} />
           </div>
+          <div style={{ marginBottom: "10px" }}></div>
           <div>
-            <button className = "defaultButton" type='button' onClick={onClickSubmit}>Submit Register</button>
-            <button className = "defaultButton" type='button' onClick={onClickRegister}>Login</button>
+            <button className="defaultButton" type='button' onClick={onClickSubmit}>Submit Register</button>
+            <button className="defaultButton" type='button' onClick={onClickRegister}>to Login</button>
           </div>
         </div>
 

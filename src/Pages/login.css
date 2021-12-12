@@ -3,6 +3,7 @@
 
 
 .loginLayout {
+  margin-top: 30px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -24,9 +25,18 @@
 .loginRow {
   margin-left: 5px;
   display: flex;
-  width: 220px;
+  width: 350px;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.registerRow {
+  margin-left: 5px;
+  display: flex;
+  width: 350px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 30px;
 }
 
 .slogentext1{

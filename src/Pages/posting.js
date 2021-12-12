@@ -39,7 +39,9 @@ function Posting() {
     }
     init_movie();
   }, [navigate])
-
+  const onback = () => {
+    navigate('/home')
+  }
   const onSubmit = async () => {
     console.log('submit session')
     if (url === "default!@#" || title === "default!@#" || selected_movie === "default!@#" || description === "default!@#") {
@@ -92,7 +94,7 @@ function Posting() {
 
         </div>
         <div className="modal_bottom">
-          <div className="defaultButton" id="closebt">Close</div>
+          <div className="nodrag defaultButton" id="closebt" onClick={onback}>Close</div>
           <div className="nodrag defaultButton" onClick={onSubmit}>Register Post</div>
         </div>
       </div>

@@ -74,7 +74,7 @@ function Contents() {
   }
 
   return (
-    <div className="App">
+    <div className="defaultlayout">
       <Header></Header>
       <div>Watch the other guy's review</div>
       <form style={{ marginTop: "50px" }}>

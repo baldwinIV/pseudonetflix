@@ -33,9 +33,8 @@ function Home() {
   }, [navigate])
 
   return (
-    <div className="App">
+    <div className="HomeLayout">
       <Header></Header>
-
       <div className="ColContainer">
         <div className="RowContainer">
           <HomeComponent _path={"/Curation"} _width={300} _height={150} name={"Curation"}></HomeComponent>
@@ -46,7 +45,7 @@ function Home() {
           <HomeComponent _path={"/Individualinfo"} _width={300} _height={150} name={"Individualinfo"}></HomeComponent>
         </div>
       </div>
-      <button type='button' onClick={onClickDelete}>delete</button>
+      <button type='button' className='defaultButton' onClick={onClickDelete}>Logout</button>
     </div >
   );
 }

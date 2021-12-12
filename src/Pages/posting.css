@@ -16,7 +16,7 @@
   height: 700px;
   border: solid 1px black;
   border-radius: 20px;
-  background-color: #666370;
+  background-color: rgba(128,128,128,0.9);
  
   overflow: auto;
 }

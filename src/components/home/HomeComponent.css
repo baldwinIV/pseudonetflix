@@ -1,9 +1,23 @@
 .layout {
-    background-color: #666370;
+    background-color: rgba(0,0,0,0.7);
     border: solid 1px red;
-    border-radius: 5px;
-    color: black;
+    border-radius: 15px;
+    color: red;
+    display: flex;
+    margin : 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
 }
+
+.layout:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+  }
 
 .nodrag {
     -webkit-user-select: none;

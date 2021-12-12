@@ -6,6 +6,19 @@
 
 }
 
+.HomeLayout {
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/login_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+
 .Titlefont {
   color: #ff220c;
   font-size: 1.5rem;
@@ -23,7 +36,7 @@
   width: 100%;
   height: 1.5rem;
   padding: 0.5rem;
-  background-color: black;
+  /* background-color: black; */
   display: flex;
   flex-direction: row;
   align-items: center;

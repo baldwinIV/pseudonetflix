@@ -27,10 +27,13 @@ function Individualinfo() {
   return (
     <div className="App">
       <Header></Header>
-      <div>your name is {sessionStorage.getItem("Name")}</div>
-      <div>your birthday is {sessionStorage.getItem("Birth")}</div>
-      <div>your Email is {sessionStorage.getItem("Email")}</div>
-      <div> your post is like this</div>
+      <div className="infocontainer">
+        <div>your name is {sessionStorage.getItem("Name")}</div>
+        <div>your birthday is {sessionStorage.getItem("Birth")}</div>
+        <div>your Email is {sessionStorage.getItem("Email")}</div>
+
+      </div>
+      <div className='slogen'>You wrote these posts...</div>
       <div className='board'>
         {posts
           .map((value, index, array) => { //value array[index] index index array movies movies.filter.map // sorting

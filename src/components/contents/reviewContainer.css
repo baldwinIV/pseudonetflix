@@ -11,7 +11,7 @@
     flex-direction: column;
     border: solid gray 1px;
     border-radius: 15px;
-    background-color: gray;
+    background-color: rgba(0, 0, 0, 0.8);
     margin-right: 10px;
     width: 1000px;
     height: 750px;
@@ -29,14 +29,19 @@
 
 .review_title {
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.review_font {
+    font-size: 1.2rem;
 }
 
 
 .review_img {
     flex: 6;
-    width: 100%;
-    background-size: cover;
+    width: 75%;
+    background-size: contain;
     overflow: hidden;
     object-fit: fill;
     margin: 0 auto;
@@ -52,3 +57,30 @@
     width: 100%;
 }
 
+.MovieTextContainer {
+    /* width: 1000px;
+    height: 750px; */
+    position: absolute;
+    Top: 20px;
+    left: 50px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    border: solid gray 1px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+.MTcomponent {
+    text-align: start;
+    font-size: 1.5rem;
+
+}
+
+.MTtitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    font-weight: 1000;
+
+}
